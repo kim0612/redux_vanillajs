@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+
+    <div class="red">
+      <h1>red</h1>
+      <button>fire</button>
+    </div>
+    
+    <div class="green">
+      <h1>green</h1>
+      <button>fire</button>
+    </div>
+    
+    <div class="blue">
+      <h1>blue</h1>
+      <button>fire</button>
+    </div>
+    
+    <div class="orange">
+      <h1>orange</h1>
+      <button>fire</button>
+    </div>
+
+    <script>
+      const red = document.querySelector(".red");
+      const green = document.querySelector(".green");
+      const blue = document.querySelector(".blue");
+      const orange = document.querySelector(".orange");
+
+      const eventHandler = (e) => {
+        document.querySelectorAll("div").forEach((item)=>{
+          item.style.backgroundColor = e.target.parentNode.className;
+        })
+      }
+
+      red.querySelector("button").addEventListener("click", eventHandler);
+      green.querySelector("button").addEventListener("click", eventHandler);
+      blue.querySelector("button").addEventListener("click", eventHandler);
+      orange.querySelector("button").addEventListener("click", eventHandler);
+
+    </script>
+
+  </body>
+</html>
