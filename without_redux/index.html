@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>without_redux</title>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
@@ -27,24 +27,6 @@
       <button>fire</button>
     </div>
 
-    <script>
-      const red = document.querySelector(".red");
-      const green = document.querySelector(".green");
-      const blue = document.querySelector(".blue");
-      const orange = document.querySelector(".orange");
-
-      const eventHandler = (e) => {
-        document.querySelectorAll("div").forEach((item)=>{
-          item.style.backgroundColor = e.target.parentNode.className;
-        })
-      }
-
-      red.querySelector("button").addEventListener("click", eventHandler);
-      green.querySelector("button").addEventListener("click", eventHandler);
-      blue.querySelector("button").addEventListener("click", eventHandler);
-      orange.querySelector("button").addEventListener("click", eventHandler);
-
-    </script>
-
+    <script src="index.js"></script>
   </body>
 </html>
