@@ -5,10 +5,12 @@ const reducer = (state, action) => {
   }
   switch (action.type){
     case "CHANGE_COLOR":
-      return {
+      newState = {
         ...state,
         color : action.color
-      }
+      };
+      console.log(action.type, action, state, newState);
+      return newState;
   }
 }
 const store = Redux.createStore(
